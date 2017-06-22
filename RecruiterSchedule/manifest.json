@@ -8,7 +8,7 @@
   },
   "mapping": [
     {
-      "dataSetId": "dcd8ecd9-5be7-4cd6-a2de-5dc3e2736d6f",
+      "dataSetId": "",
       "alias": "master",
       "fields": [
         {
@@ -265,6 +265,5 @@
         }
       ]
     }
-  ],
-  "id": "fff426e1-8431-4782-a5a7-d0afc6832d1f"
+  ]
 }
