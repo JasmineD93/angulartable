@@ -88,6 +88,17 @@ hr {
     margin-bottom: 1px;
     
 }
+
+#printv{
+    border: 1px dashed black;
+    background-color: #EAFCFE;
+    align-content: right;
+    font-family: 'Roboto', sans-serif;
+    font-weight: bold;
+    font-size: 20px;
+    margin-right: 10px;
+    margin-bottom: 1px;
+}
 #Today{
     background-color: #FEF65B;
     font-family: 'Roboto', sans-serif;
@@ -167,6 +178,10 @@ th:nth-child(n+54){
     }
     
     #print2{
+        display: none;
+    }
+    
+    #printv{
         display: none;
     }
     
