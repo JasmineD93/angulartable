@@ -11,8 +11,10 @@
   <body ng-app="rcr_sched" ng-controller="main">
       <div id="mydiv">
         <table>
-            <tr id="printc"><button id="print" class="fa fa-print fa-3x" onclick="javascript:window.print()"></button>
-                <button id="print2" onclick="javascript:window.print()">Print Page</button>
+            <tr id="printc">
+                <button id="printv" ng-click="printview()" ng-hide="isprinting">Print Version</button>
+                <button id="print" class="fa fa-print fa-3x" ng-show="isprinting" ng-click="print()"></button>
+                <button id="print2" ng-click="print()" ng-show="isprinting">Print Page</button>
                 <button id="today">Today/SLDD</button>
                 <button id="PTO">PTO</button>
                 <button id="Hol">Hol</button>
