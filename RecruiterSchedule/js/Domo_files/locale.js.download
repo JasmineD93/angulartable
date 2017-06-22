@@ -1,0 +1,19 @@
+window.Domo.locale = {
+  delimiters: {
+    thousands: ',',
+    decimal: '.'
+  },
+  abbreviations: {
+    thousand: 'K',
+    million: 'M',
+    billion: 'B',
+    trillion: 'T'
+  },
+  patterns: {
+    negPre: '-',
+    negSuf: '',
+    posPre: '',
+    posSuf: ''
+  },
+  defaultCurrencySymbol: '$'
+};

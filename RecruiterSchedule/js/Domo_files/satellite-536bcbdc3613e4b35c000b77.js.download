@@ -1,0 +1,40 @@
+/* function dtm_track
+ *   @param type -- the type of call. Defaults to "view"
+ *   @param obj -- an object of data elements for mapping to a tag
+ *
+ *   @description This function is used for tracking some event dynamically.
+ *     This is used in conjunction with a special process in direct call
+ *     rules and js object data elements.
+ *
+ *     All data elements passed into the obj param of this function should
+ *     be created in dtm as js objects named "dtm_layer_track.<element_name>".
+ *     Each possible item in the object should be created as a data element
+ *     and then mapped in the associated direct call rule.
+ *
+ *     All direct call rules will have the string in the format of
+ *     <type>. So, you might have "view". In
+ *     SiteCatalyst, for example, you would put this string and then init an
+ *     s.t() call because it is a "view".
+ *      
+ *     If you'd like to view the output of these calls as they happen, enable
+ *     the debug cookie in the console with the following:
+ *         document.cookie="dtm_debug=true";
+ */
+
+window.dtm_track = function(type,obj) {
+  var hasTracked = "";
+  if (typeof _satellite == "undefined") hasTracked = "NOT ";
+  if (typeof type == "undefined" || type == null || !type) type = "view";
+  window.dtm_layer_track = obj;
+  
+  if (console && console.log
+      && typeof _satellite.readCookie('dtm_debug') != "undefined"
+      && (_satellite.readCookie('dtm_debug') == "true"
+          || _satellite.readCookie('dtm_debug') == true)) {
+    console.log("dtm " + hasTracked + "tracked '" + type + "'", obj);
+  }
+  
+  if (hasTracked != "NOT ")
+    _satellite.track(type);
+  dtm_layer_track = {};
+};

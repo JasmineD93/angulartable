@@ -1,0 +1,43 @@
+<html>
+  <head>
+    <link rel="stylesheet" type="text/css" media="all" href="app.css" />
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600,700" rel="stylesheet">
+    <script src="js/angular.js"></script>
+    <script src="js/angular-route.js"></script>
+    <script src="js/domo.js"></script>
+    <script src="js/app.js"></script>      
+  </head>
+  <body ng-app="rcr_sched" ng-controller="main">
+      <div id="mydiv">
+        <table>
+            <tr id="printc"><button id="print" class="fa fa-print fa-3x" onclick="javascript:window.print()"></button>
+                <button id="print2" onclick="javascript:window.print()">Print Page</button>
+                <button id="today">Today/SLDD</button>
+                <button id="PTO">PTO</button>
+                <button id="Hol">Hol</button>
+            </tr>
+            <tr height="40" id="header">
+                <!-- This will be used in the future if we end up adding a drill down to the page. 
+                            <th id="printc"><button id="print" class="fa fa-print fa-2x" onclick="print('#mydiv')"></button></th>-->
+                <th ng-repeat="prop in columns">{{prop.date}}</th>
+                <th ng-repeat="prop in columns">{{prop.date}}</th>
+            </tr>  
+            <tr ng-repeat="r in data">
+<!-- This will add a column with a plus sign, might be used in the future if we require a drill down for this page.
+                <td id="linkc">
+                    <a  href="test.html">
+                    <i class="fa fa-plus-square" aria-hidden="true"></i>
+                    </a> -->
+                <td align="center" ng-repeat="prop2 in columns" class="{{getColor(r.TeamRank, r.Team, prop2.title)}}" style="{{isPTO(prop2.title, 'PTO' + prop2.title, r['PTO' + prop2.title]) || isHol(prop2.title, 'Hol' + prop2.title, r['Hol' + prop2.title])}}">
+                    {{r[prop2.title]}}
+                </td>
+                <td align="center" ng-repeat="prop2 in columns" class="{{getColor(r.TeamRank, r.Team, prop2.title)}}" style="{{isPTO(prop2.title, 'PTO' + prop2.title, r['PTO' + prop2.title]) || isHol(prop2.title, 'Hol' + prop2.title, r['Hol' + prop2.title])}}">
+                    {{r[prop2.title]}}
+                </td>
+            </tr>
+        </table>
+<!--          <hr>-->
+      </div>  
+  </body>
+</html>

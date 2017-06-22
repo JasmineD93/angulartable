@@ -1,0 +1,270 @@
+{
+  "name": "RecruiterSchedule",
+  "version": "1.0.0",
+  "fullpage": true,
+  "size": {
+    "width": 8,
+    "height": 4
+  },
+  "mapping": [
+    {
+      "dataSetId": "dcd8ecd9-5be7-4cd6-a2de-5dc3e2736d6f",
+      "alias": "master",
+      "fields": [
+        {
+          "alias": "TeamRank",
+          "columnName": "TeamRank"
+        },
+        {
+          "alias": "TeamMember",
+          "columnName": "TeamMember"
+        },
+        {
+          "alias": "Team",
+          "columnName": "Team"
+        },
+        {
+          "alias": "JobNumber",
+          "columnName": "Job Number"
+        },
+        {
+          "alias": "ClientMgr",
+          "columnName": "CM"
+        },
+        {
+          "alias": "Status",
+          "columnName": "Status"
+        },
+        {
+          "alias": "Sub",
+          "columnName": "Submissions"
+        },
+        {
+          "alias": "CA",
+          "columnName": "ContactAttempted"
+        },
+        {
+          "alias": "CM",
+          "columnName": "ContactMade"
+        },
+        {
+          "alias": "CES",
+          "columnName": "CEsSent"
+        },
+        {
+          "alias": "CER",
+          "columnName": "CEsReceived"
+        },
+        {
+          "alias": "SO",
+          "columnName": "Sendouts"
+        },
+        {
+          "alias": "Int",
+          "columnName": "Interviews"
+        },
+        {
+          "alias": "SLDD",
+          "columnName": "Shortlist Due Date"
+        },
+        {
+          "alias": "NDD",
+          "columnName": "No Due Date"
+        },
+        {
+          "alias": "Past",
+          "columnName": "Past Dates"
+        },
+        {
+          "alias": "MonThisWk",
+          "columnName": "Mon This Week"
+        },
+        {
+          "alias": "TueThisWk",
+          "columnName": "Tue This Week"
+        },
+        {
+          "alias": "WedThisWk",
+          "columnName": "Wed This Week"
+        },
+        {
+          "alias": "ThuThisWk",
+          "columnName": "Thu This Week"
+        },
+        {
+          "alias": "FriThisWk",
+          "columnName": "Fri This Week"
+        },
+        {
+          "alias": "MonNextWk",
+          "columnName": "Mon Next Week"
+        },
+        {
+          "alias": "TueNextWk",
+          "columnName": "Tue Next Week"
+        },
+        {
+          "alias": "WedNextWk",
+          "columnName": "Wed Next Week"
+        },
+        {
+          "alias": "ThuNextWk",
+          "columnName": "Thu Next Week"
+        },
+        {
+          "alias": "FriNextWk",
+          "columnName": "Fri Next Week"
+        },
+        {
+          "alias": "Mon2Wks",
+          "columnName": "Mon 2 Weeks"
+        },
+        {
+          "alias": "Tue2Wks",
+          "columnName": "Tue 2 Weeks"
+        },
+        {
+          "alias": "Wed2Wks",
+          "columnName": "Wed 2 Weeks"
+        },
+        {
+          "alias": "Thu2Wks",
+          "columnName": "Thu 2 Weeks"
+        },
+        {
+          "alias": "Fri2Wks",
+          "columnName": "Fri 2 Weeks"
+        },
+        {
+          "alias": "Future",
+          "columnName": "Future Date"
+        },
+        {
+          "alias": "TotalJobs",
+          "columnName": "Total Jobs"
+        },
+        {
+          "alias": "PTOMonThisWk",
+          "columnName": "PTO_Mon_This_Week"
+        },
+        {
+          "alias": "PTOTueThisWk",
+          "columnName": "PTO_Tue_This_Week"
+        },
+        {
+          "alias": "PTOWedThisWk",
+          "columnName": "PTO_Wed_This_Week"
+        },
+        {
+          "alias": "PTOThuThisWk",
+          "columnName": "PTO_Thu_This_Week"
+        },
+        {
+          "alias": "PTOFriThisWk",
+          "columnName": "PTO_Fri_This_Week"
+        },
+        {
+          "alias": "PTOMonNextWk",
+          "columnName": "PTO_Mon_Next_Week"
+        },
+        {
+          "alias": "PTOTueNextWk",
+          "columnName": "PTO_Tue_Next_Week"
+        },
+        {
+          "alias": "PTOWedNextWk",
+          "columnName": "PTO_Wed_Next_Week"
+        },
+        {
+          "alias": "PTOThuNextWk",
+          "columnName": "PTO_Thu_Next_Week"
+        },
+        {
+          "alias": "PTOFriNextWk",
+          "columnName": "PTO_Fri_Next_Week"
+        },
+        {
+          "alias": "PTOMon2Wks",
+          "columnName": "PTO_Mon_2_Weeks"
+        },
+        {
+          "alias": "PTOTue2Wks",
+          "columnName": "PTO_Tue_2_Weeks"
+        },
+        {
+          "alias": "PTOWed2Wks",
+          "columnName": "PTO_Wed_2_Weeks"
+        },
+        {
+          "alias": "PTOThu2Wks",
+          "columnName": "PTO_Thu_2_Weeks"
+        },
+        {
+          "alias": "PTOFri2Wks",
+          "columnName": "PTO_Fri_2_Weeks"
+        },
+        {
+          "alias": "HolMonThisWk",
+          "columnName": "HOL_Mon_This_Week"
+        },
+        {
+          "alias": "HolTueThisWk",
+          "columnName": "HOL_Tue_This_Week"
+        },
+        {
+          "alias": "HolWedThisWk",
+          "columnName": "HOL_Wed_This_Week"
+        },
+        {
+          "alias": "HolThuThisWk",
+          "columnName": "HOL_Thu_This_Week"
+        },
+        {
+          "alias": "HolFriThisWk",
+          "columnName": "HOL_Fri_This_Week"
+        },
+        {
+          "alias": "HolMonNextWk",
+          "columnName": "HOL_Mon_Next_Week"
+        },
+        {
+          "alias": "HolTueNextWk",
+          "columnName": "HOL_Tue_Next_Week"
+        },
+        {
+          "alias": "HolWedNextWk",
+          "columnName": "HOL_Wed_Next_Week"
+        },
+        {
+          "alias": "HolThuNextWk",
+          "columnName": "HOL_Thu_Next_Week"
+        },
+        {
+          "alias": "HolFriNextWk",
+          "columnName": "HOL_Fri_Next_Week"
+        },
+        {
+          "alias": "HolMon2Wks",
+          "columnName": "HOL_Mon_2_Weeks"
+        },
+        {
+          "alias": "HolTue2Wks",
+          "columnName": "HOL_Tue_2_Weeks"
+        },
+        {
+          "alias": "HolWed2Wks",
+          "columnName": "HOL_Wed_2_Weeks"
+        },
+        {
+          "alias": "HolThu2Wks",
+          "columnName": "HOL_Thu_2_Weeks"
+        },
+        {
+          "alias": "HolFri2Wks",
+          "columnName": "HOL_Fri_2_Weeks"
+        }
+      ]
+    }
+  ],
+  "id": "fff426e1-8431-4782-a5a7-d0afc6832d1f"
+}
