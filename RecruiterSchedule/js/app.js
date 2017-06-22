@@ -1,21 +1,17 @@
-var app = angular.module('rcr_sched',['ngRoute']);
+var app = angular.module('rcr_sched',[]);
 
- app.config(['$routeProvider',
-  function($routeProvider) {
-    $routeProvider
-       .when('/',{
-           templateUrl:'index.html',
-           controller:'main'
-       })
-       .when('drill',{
-           templateUrl:'drill.html'
-       })
-//       .otherwise({redirectTo: '/'});  
-    }
- ]);
-//Range Error: Maximum call stack size exceeded
-
-app.controller('main', ['$scope', '$location', function ($scope, $location){
+app.controller('main', ['$scope', '$location','$window', function ($scope, $location, $window){
+        $window.onload = function(e){
+            var split = $location.absUrl().split("?")
+            var isprinting = (split[1].split("="))[1]
+            if(isprinting == "true")
+                {
+                    $scope.isprinting = true;
+                }
+            else{
+                $scope.isprinting = false; 
+            }
+        }
         $scope.goNext = function(view){
             $location.path('/');
         }
@@ -42,12 +38,20 @@ app.controller('main', ['$scope', '$location', function ($scope, $location){
                 'Fri2Wks': {date: new Date(x.getFullYear(), x.getMonth(), x.getDate() + 14 - (x.getDay() - 5)), title:'Fri2Wks'}
             }
         }
+        $scope.printview = function(){
+            domo.navigate("https://b14e33be-5dfa-4ed5-88ba-1ca2c0a912cf.domoapps.prod5.domo.com?printing=true",true)
+        }
+        $scope.isprinting = false;
         $scope.isPTO = function(rowTitle, ptoTitle, value) {
             if (rowTitle == (ptoTitle.replace('PTO', '')) && value) {
                 return 'background-color: #7DD961;';
             }
             return '';
             
+        }
+        
+        $scope.print = function(){
+            window.print();
         }
         $scope.isHol = function(rowTitle, holTitle, value ){
             if (rowTitle == (holTitle.replace('Hol', '')) && value){
